@@ -1,8 +1,8 @@
 {
   "name": "audio.io",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a tiny wrapper of audio api",
-  "main": "build/audio.js",
+  "main": "build/index.js",
   "scripts": {
     "example": "webpack --config example/webpack.js",
     "build": "babel lib --out-dir build",
@@ -16,7 +16,8 @@
     "api"
   ],
   "files": [
-    "build/"
+    "build/",
+    "lib/"
   ],
   "author": "haoxin",
   "license": "MIT",

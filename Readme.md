@@ -3,16 +3,45 @@
 
 A tiny wraaper of audio APIs.
 
+### Classes
+
+* `AudioPlayer`
+
 ### Usage
 
+* `AudioPlayer`
+
 ```js
-import { Audio } from 'audio.io'
+import { AudioPlayer } from 'audio.io'
 
-const audio = new Audio()
+const player = new AudioPlayer()
 
-audio
+player
   .load('your-url.mp3')
-  .then(() => audio.play())
+  .then(() => player.play())
+```
+
+* `AudioRecorder`
+
+```js
+
+import { AudioRecorder, getDownloadLink } from 'audio.io'
+
+const recorder = new AudioRecorder({
+  workerPath: 'build/recorder-worker.js'
+})
+
+recorder.start()
+
+setTimeout(() => {
+  recorder.stop()
+
+  recorder
+    .exportAudio()
+    .then(audioBlob => getDownloadLink(audioBlob, 'kiku.wav'))
+    .then(a => ...)
+}, 60000)
+
 ```
 
 ### License

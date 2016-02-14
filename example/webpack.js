@@ -4,7 +4,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: path.join(__dirname, 'play'),
+    recorder: path.join(__dirname, 'recorder.js'),
+    player: path.join(__dirname, 'player.js'),
   },
 
   output: {
