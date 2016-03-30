@@ -1,10 +1,10 @@
 {
   "name": "audio.io",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "a tiny wrapper of audio api",
   "main": "build/index.js",
   "scripts": {
-    "example": "webpack --config example/webpack.js",
+    "example": "npm run build && webpack --config example/webpack.js",
     "build": "babel lib --out-dir build",
     "prepublish": "npm run build",
     "test": "mocha"

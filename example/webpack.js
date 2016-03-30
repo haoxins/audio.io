@@ -4,6 +4,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
+    mediarecorder: path.join(__dirname, 'media-recorder.js'),
     recorder: path.join(__dirname, 'recorder.js'),
     player: path.join(__dirname, 'player.js'),
   },

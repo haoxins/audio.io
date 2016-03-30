@@ -1,9 +1,7 @@
 
-import { AudioPlayer, AudioRecorder, getDownloadLink } from '..'
+import { AudioPlayer, MediaRecorder, getDownloadLink } from '..'
 
-const recorder = new AudioRecorder({
-  workerPath: '/build/recorder-worker.js'
-})
+const recorder = new MediaRecorder()
 
 const player = new AudioPlayer()
 
@@ -22,7 +20,7 @@ window.clearData = () => {
 window.exportAudio = () => {
   recorder
     .exportAudio()
-    .then(audioBlob => getDownloadLink(audioBlob, 'kiku.wav'))
+    .then(audioBlob => getDownloadLink(audioBlob, 'kiku.ogg'))
     .then(a => document.querySelector('#link').appendChild(a))
 }
 

@@ -9,6 +9,22 @@ A tiny wraaper of audio APIs.
 
 ### Usage
 
+* `MediaRecorder` - A tiny wraaper of `w3c MediaRecorder`
+
+```js
+import { MediaRecorder } from 'audio.io'
+
+const recorder = new MediaRecorder()
+
+recorder.start()
+
+// ...
+
+recorder
+  .exportAudio()
+  .then(audioBlob => ...)
+```
+
 * `AudioPlayer`
 
 ```js
@@ -41,7 +57,6 @@ setTimeout(() => {
     .then(audioBlob => getDownloadLink(audioBlob, 'kiku.wav'))
     .then(a => ...)
 }, 60000)
-
 ```
 
 ### License
