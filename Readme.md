@@ -9,12 +9,12 @@ A tiny wraaper of audio APIs.
 
 ### Usage
 
-* `MediaRecorder` - A tiny wraaper of `w3c MediaRecorder`
+* `AudioRecorder` - A tiny wraaper of `w3c MediaRecorder`
 
 ```js
-import { MediaRecorder } from 'audio.io'
+import { AudioRecorder } from 'audio.io'
 
-const recorder = new MediaRecorder()
+const recorder = new AudioRecorder()
 
 recorder.start()
 

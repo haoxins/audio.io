@@ -1,7 +1,7 @@
 
-import { AudioPlayer, MediaRecorder, getDownloadLink } from '..'
+import { AudioPlayer, AudioRecorder, getDownloadLink } from '..'
 
-const recorder = new MediaRecorder()
+const recorder = new AudioRecorder()
 
 const player = new AudioPlayer()
 
