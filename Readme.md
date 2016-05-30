@@ -37,27 +37,5 @@ player
   .then(() => player.play())
 ```
 
-* `AudioRecorder`
-
-```js
-
-import { AudioRecorder, getDownloadLink } from 'audio.io'
-
-const recorder = new AudioRecorder({
-  workerPath: 'build/recorder-worker.js'
-})
-
-recorder.start()
-
-setTimeout(() => {
-  recorder.stop()
-
-  recorder
-    .exportAudio()
-    .then(audioBlob => getDownloadLink(audioBlob, 'kiku.wav'))
-    .then(a => ...)
-}, 60000)
-```
-
 ### License
 MIT
